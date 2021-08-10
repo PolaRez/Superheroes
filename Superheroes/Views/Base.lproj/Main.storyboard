@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Superheroes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uXX-nw-cXO" userLabel="SearchView">
+                                <rect key="frame" x="0.0" y="44" width="414" height="65"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="4jR-QM-vHD">
+                                        <rect key="frame" x="10" y="10" width="394" height="45"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vHw-pU-4DD">
+                                                <rect key="frame" x="0.0" y="0.0" width="354" height="45"/>
+                                                <color key="backgroundColor" red="0.75125366449999997" green="0.91588062049999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yLc-4W-SBf">
+                                                <rect key="frame" x="364" y="0.0" width="30" height="45"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="30" id="cgx-Dl-v9g"/>
+                                                </constraints>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal">
+                                                    <imageReference key="image" image="magnifyingglass" catalog="system" symbolScale="large"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="searchButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mBv-n2-iCW"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.54033595000000001" green="0.7842765129" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="4jR-QM-vHD" secondAttribute="trailing" constant="10" id="G7s-Jd-cOO"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="65" id="Zrd-qr-ztI"/>
+                                    <constraint firstItem="4jR-QM-vHD" firstAttribute="top" secondItem="uXX-nw-cXO" secondAttribute="top" constant="10" id="atJ-i6-BaJ"/>
+                                    <constraint firstItem="4jR-QM-vHD" firstAttribute="leading" secondItem="uXX-nw-cXO" secondAttribute="leading" constant="10" id="hdp-7x-jYs"/>
+                                    <constraint firstAttribute="bottom" secondItem="4jR-QM-vHD" secondAttribute="bottom" constant="10" id="rtr-eM-DSe"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SU1-VR-9dj">
+                                <rect key="frame" x="0.0" y="109" width="414" height="787"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchResultCell" id="daj-VW-f1L">
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="daj-VW-f1L" id="4BG-cI-Hxm">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="uXX-nw-cXO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="64F-lc-DYv"/>
+                            <constraint firstItem="SU1-VR-9dj" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="7LC-hc-vgL"/>
+                            <constraint firstItem="uXX-nw-cXO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="JZp-FE-W3A"/>
+                            <constraint firstItem="SU1-VR-9dj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Y9b-NG-O1O"/>
+                            <constraint firstAttribute="bottom" secondItem="SU1-VR-9dj" secondAttribute="bottom" id="bvi-cC-wQu"/>
+                            <constraint firstItem="uXX-nw-cXO" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="fvo-5J-7QF"/>
+                            <constraint firstItem="SU1-VR-9dj" firstAttribute="top" secondItem="uXX-nw-cXO" secondAttribute="bottom" id="xmg-BS-nIz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="searchField" destination="vHw-pU-4DD" id="BJF-ZM-uah"/>
+                        <outlet property="searchResultesTableView" destination="SU1-VR-9dj" id="qh1-CY-l29"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="34.782608695652179" y="93.75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
